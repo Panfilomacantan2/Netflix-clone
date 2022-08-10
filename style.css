@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	background: #111;
+}
+
+header {
+	width: 100%;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	transition: all 0.3s ease-in-out;
+}
+
+header .logo {
+	width: 100px;
+	cursor: pointer;
+}
+
+header .avatar {
+	width: 30px;
+	cursor: pointer;
+}
+
+.banner {
+	height: 520px;
+	width: 100%;
+	z-index: 1;
+	position: relative;
+}
+
+.banner .banner__bottom {
+	height: 7.4rem;
+	width: 100%;
+	background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.banner .banner__content {
+	position: absolute;
+	top: 30%;
+	left: 0;
+	padding: 20px;
+	margin-left: 20px;
+	width: 620px;
+}
+
+.banner .banner__content .banner__title {
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.banner .banner__content .banner__overview {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.banner .banner__content .banner__button__container {
+	width: 260px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 20;
+}
+
+.play__btn,
+.playlist__btn {
+	width: 130px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 14px;
+	font-weight: 500;
+	margin-left: 10px;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.play__btn {
+	margin-left: 0px;
+}
+
+.play__btn:hover,
+.playlist__btn:hover {
+	background: rgba(255, 255, 255, 0.8);
+	color: rgba(0, 0, 0, 0.9);
+}
+
+/* MOVIE CATEGORIES CONTAINER */
+.movie__categories {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.category {
+	width: 100%;
+	display: flex;
+	overflow-y: hidden;
+	margin-top: 10px;
+	overflow-x: scroll;
+	padding: 0 10px;
+}
+
+.category::-webkit-scrollbar {
+	width: 3px;
+}
+
+.category .movie_box {
+	transition: all 0.5s ease-in-out;
+	padding: 5px;
+}
+
+.category .movie_box:hover img {
+	transform: scale(1.1);
+}
+
+.category__title {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #fff;
+	text-align: left;
+	width: 100%;
+	margin-left: 30px;
+	margin-top: 20px;
+}
